@@ -7,7 +7,7 @@ const path = require('path')
 app.set("view engine", "hbs")
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.use(express.static('public'))
+// app.use(express.static('public'))
 app.use(express.static(path.join(__dirname, '/public')))
 
 app.use(require('./routes/index.js'))
