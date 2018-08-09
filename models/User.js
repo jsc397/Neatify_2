@@ -9,7 +9,7 @@ const User = new Schema ({
     solutions: [
         {
             type: Schema.Types.ObjectId,
-            ref: "Soultion"
+            ref: "Solution"
         }
     ]
 })

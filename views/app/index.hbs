@@ -1,0 +1,42 @@
+{{!-- <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="#">Login</a>
+                    <a class="nav-link active" href="#">Signup</a>
+                </nav>
+
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Neatify</h1>
+            <p class="lead">Explanation for Neatify Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quae veritatis totam
+                facilis earum, molestiae id sint natus vel voluptatem minima modi quaerat exercitationem nulla voluptatibus
+                dolore? Labore, saepe expedita.</p>
+            <p class="lead">
+                <a href="/problems" class="btn btn-lg btn-secondary">Problems</a>
+            </p>
+        </main> --}}
+
+
+{{#if solutions}}
+<ul class="solutions">
+    {{#each solutions}}
+    <div class="card">
+        <div class="card-content">
+            <a class="card-title" href="/solution/{{id}}">
+                {{ content }}
+            </a>
+        </div>
+        <div class="card-action">
+            <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+            <span class="solution__date">{{ createdAt }}</span>
+            <span class="solution_comments">{{ comments.length }} Comments</span>
+        </div>
+    </div>
+    {{/each}}
+</ul>
+{{/if}}
