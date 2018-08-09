@@ -12,4 +12,8 @@
             <button type="submit" name="button">Delete</button>
         </form>
     </div>
+    {{!-- not sure if this will work yet --}}
+    <form action="/user/{{this.solution}}?_method=delete" method="post">
+        <button type="delete" value="Remove">Delete Solution</button>
+    </form>
 </div>

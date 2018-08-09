@@ -8,4 +8,7 @@
     <p>No Solutions yet</p>
     {{/if}}
 </section>
-<button>Delete</button>
+
+<form action="/user/{{this.id}}?_method=delete" method="post">
+    <button type="delete" value="Remove">Delete User</button>
+</form>

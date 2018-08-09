@@ -6,6 +6,6 @@ const userController = require('../controllers/user.js')
 router.get("/new", userController.new)
 router.post("/", userController.create)
 router.get("/:id", userController.show)
-// router.get("/:id", userController.destroy)
+router.delete("/:id", userController.delete)
 
 module.exports = router
