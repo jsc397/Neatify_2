@@ -8,8 +8,8 @@ router.use('/user', require('./user'))
 router.use('/problems', require('./problems'))
 router.use('/', applicationController.index)
 
-router.all('*',(req,res)=> {
-    res.status(400).send()
-})
+// router.all('*',(req,res)=> {
+//     res.status(400).send()
+// })
 
 module.exports = router

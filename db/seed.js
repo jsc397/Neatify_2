@@ -82,26 +82,25 @@ User.find({}).remove(() => {
 // Problem.find({}).remove(() => {
 //     Solution.find({}).remove(() => {
 //         let problemOne = Problem.create({
-//             paragraph: "This is a potential problem with bad grammar"
+//             paragraph: "This is potential problem one",
+//             solutions: user._id
+//         }).then(problem => {
+//             Promise.all([
+//                 Solution.create({
+//                     content: "this is one user's potential solution to the problem",
+//                     author: user._id
+//                 }).then(solution => {
+//                     problems.solutions.push(solution)
+//                 }),
+//                 Solution.create({
+//                     content:"this is a second user's potential solution to the problem",
+//                     author: user._id
+//                 }).then(solution => {
+//                     problems.solutions.push(solution)
+//                 })
+//             ]).then(() => {
+//                 problem.save(err => console.log(err))
+//             })
 //         })
-//        }).then(problem =>
-//         Promise.all([
-//            Solution.create({
-//              content: "this would be user's solution"
-//            }).then(solution => {
-//         solutions.push(solution)
-//            }),
-//            Solution.create({
-//                content: "this would be another user's solution to the problem"
-//            }).then (solution => {
-//                solutions.push(solution)
-//            })
-//         ]).then(() => {
-//             problem.save(err => console.log(err))
-//         })
-
-// Problem.find({}).remove(() => {
-//     Solution.find({}).remove(() => {
-//         let problemOne = Problem.
 //     })
 // })

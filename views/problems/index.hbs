@@ -1,4 +1,24 @@
 
+{{#if problems}}
 <ul class="problems">
-    {{#each problems}} {{/each}}
+    {{#each problems}}
+    <div>
+    <li> {{ paragraph }}</li>
+    <button>Select</button>
+    </div>
+    {{/each}}
 </ul>
+{{/if}}
+
+    {{!-- <div class="card">
+        <div class="card-content">
+            <a class="card-title" href="/problems/{{id}}">
+                {{ paragraphs }}
+            </a>
+        </div>
+        <div class="card-action">
+            <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+            <span class="problem__date">{{ createdAt }}</span>
+            <span class="problem_comments">{{ comments.length }} test</span>
+        </div>
+    </div> --}}
