@@ -2,11 +2,11 @@ const Problem = require("../models/Problem")
 
 module.exports = {
     index: (req, res) => {
-        Problem.find({})
-        .then(problems => {
-            // res.render("problems/index")
-            res.send('problems index view')
-        })
+        // Problem.find({})
+        // .then(problems => {
+        //   res.render('problems/index', { problems });
+        // }) 
+        res.send('problems index')
     },
     show: (req, res) => {
         // Problem.findOne({ _id: req.params.id })

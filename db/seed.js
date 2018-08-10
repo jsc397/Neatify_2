@@ -79,13 +79,29 @@ User.find({}).remove(() => {
     })
 })
 
-Problem.find({}).remove(() => {
-    Solution.find({}).remove(() => {
-        let
-    })
-}
+// Problem.find({}).remove(() => {
+//     Solution.find({}).remove(() => {
+//         let problemOne = Problem.create({
+//             paragraph: "This is a potential problem with bad grammar"
+//         })
+//        }).then(problem =>
+//         Promise.all([
+//            Solution.create({
+//              content: "this would be user's solution"
+//            }).then(solution => {
+//         solutions.push(solution)
+//            }),
+//            Solution.create({
+//                content: "this would be another user's solution to the problem"
+//            }).then (solution => {
+//                solutions.push(solution)
+//            })
+//         ]).then(() => {
+//             problem.save(err => console.log(err))
+//         })
 
-    // Solution.find({}).remove(() => {
-    //     let problemOne = Problem.create({
-    //         paragraph: "This is a potential problem for the website with bad grammar"
-    //     }
+// Problem.find({}).remove(() => {
+//     Solution.find({}).remove(() => {
+//         let problemOne = Problem.
+//     })
+// })
