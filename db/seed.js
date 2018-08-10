@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const { Solution } = require("../models/Solution")
+const { Problem } = require("../models/Problem")
 
 
 User.find({}).remove(() => {
@@ -77,3 +78,14 @@ User.find({}).remove(() => {
         })
     })
 })
+
+Problem.find({}).remove(() => {
+    Solution.find({}).remove(() => {
+        let
+    })
+}
+
+    // Solution.find({}).remove(() => {
+    //     let problemOne = Problem.create({
+    //         paragraph: "This is a potential problem for the website with bad grammar"
+    //     }
