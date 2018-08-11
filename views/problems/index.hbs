@@ -4,7 +4,9 @@
     {{#each problems}}
     <div>
     <li> {{ paragraph }}</li>
-    <button>Select</button>
+    <li> {{ _id }} </li> 
+    {{!-- id temporary so I can see the id of the problems and see if on click it is going to the specific problem show page --}}
+    <a href ="problems/{{ _id }}"> <button class ="problem">Select</button> </a>
     </div>
     {{/each}}
 </ul>

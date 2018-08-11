@@ -1,5 +1,8 @@
-<div class="problems-container">
-    <h1>testtest</h1>
-     {{!--
-    <textarea cols="60" rows="15"></textarea> --}}
-</div> 
+
+<ul class="each-problem">
+    {{#each problems}}
+    <div>
+        <li> {{ _id }}</li>
+    </div>
+    {{/each}}
+</ul>

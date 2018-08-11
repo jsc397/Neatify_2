@@ -11,22 +11,27 @@ module.exports = {
         })
     },
     show: (req, res) => {
-        // Problem.findOne({ _id: req.params.id })
-        // .populate("paragraph")
-        // .exec(function(err, solution))
+        console.log('get problem: ', req.params.id)
+        Problem.findOne({_id: req.params.id})
+        .then(problem => {
+            res.render('problems/show', problem)
+        })
+        // .populate("author")
+        // .populate("comments.author")
+        // .then(gif => {
+        //     res.render('gif/show', gif) })
 
-            // Problem.findOne({ _id: req.params.id })
-            //     .populate("solutions")
-            //     .then(solutions => {
-            //         res.render('problem/show', solutions)
-            //     })
+         // Problem.findOne({ _id: req.params.id })
+        //     .populate("solutions")
+        //     .then(solutions => {
+        //         res.render('problem/show', solutions)
+       //     })
         // },
-
-
-        res.send('problems show view')
+        //  res.send('problems show view')
+        }
     }
-    
-}
+
+       
 
 
   // .sort({ createdAt: -1})
