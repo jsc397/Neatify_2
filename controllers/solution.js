@@ -7,10 +7,12 @@ module.exports = {
            content: req.body.content,
            author: req.user._id
        }).then(solution => {
-           req.user.solutions.push(solution);
-           req.user.save(err => {
-               res.status(400)
-               console.log("this is the error" + err)
+           User.findOne({_id: req.body.author})
+           .then(user => {
+               user.solutions.push(solution);
+               user.save(err => {
+                   res.redirect(`/user/${user._id`)
+               })
            })
        })
    }
