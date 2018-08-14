@@ -13,8 +13,8 @@ module.exports = {
     show: (req, res) => {
         console.log('get problem: ', req.params.id)
         Problem.findOne({_id: req.params.id})
-        .then(problem => {
-            res.render('problems/show', problem)
+        .then(problems => {
+            res.render('problems/show', problems)
         })
         // .populate("author")
         // .populate("comments.author")

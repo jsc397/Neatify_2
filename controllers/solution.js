@@ -3,7 +3,7 @@ const { Solution, Comment}  = require("../models/Solution")
 
 module.exports = {
     new: (req,res) => {
-        res.render('problems/show')
+        res.render(`/users/${_id}`)
 
     },
 
