@@ -18,11 +18,12 @@ router.delete("/user/:id", userController.delete)
 // Problem routes
 router.get("/problems", problemController.index)
 router.get("/problems/:id", problemController.show)
+router.post("/problems/:id", problemController.create)
 
 
 // Solution routes
-router.get("/solutions", solutionController.new)
-router.post("/solutions/:id", solutionController.create)
+// router.get("/solutions", solutionController.new)
+// router.post("/solutions", solutionController.create)
 
 
 

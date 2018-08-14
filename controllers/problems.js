@@ -28,6 +28,11 @@ module.exports = {
        //     })
         // },
         //  res.send('problems show view')
+        },
+        create: (req, res) => {
+    
+            console.log(req.body)
+
         }
     }
 
