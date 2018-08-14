@@ -4,7 +4,7 @@ const applicationController = require("../controllers/application.js")
 
 
 router.use('/user', require('./user'))
-// router.use('/solutions', require('./solution'))
+router.use('/solutions', require('./solution'))
 router.use('/problems', require('./problems'))
 router.use('/', require("./application.js"))
 router.use('/', applicationController.index)

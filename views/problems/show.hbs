@@ -8,14 +8,14 @@
 </ul> --}}
 
 
-<div class "each-problem">
+<div class = "each-problem">
 
     {{ paragraph }}
 </div>
-{{!-- 
-<form action="user/" method="POST" class="solution-form"> --}}
-<textarea cols="55" rows="10"></textarea>
 
-<a href ="/user {{ id }}"><button type ="submit">Submit Solution</button></a>
+<form action="/problems/{{_id}}" method="POST" class="solution-form">
+<textarea cols="55" rows="10" name="content"></textarea>
+<button type ="submit">Submit Solution</button>
 </form>
+
 
