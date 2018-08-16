@@ -7,14 +7,16 @@
     {{/each}}
 </ul> --}}
 
-{{!-- {{#each problems}} --}}
+
+
 <div>
     {{ paragraph }}
 </div>
 
-<form action="problems/{{_id}}" method="POST" class="solution-form">
-<textarea cols="55" rows="10" name="solutions"></textarea>
+
+<form action="/problems/{{_id}}?_method=PUT" method="POST" class="solution-form">
+<textarea cols="55" rows="10" name="content"></textarea>
 <button type ="submit">Submit Solution</button>
-</form>
-{{!-- {{/each}} --}}
+</form> 
+
 

@@ -17,4 +17,4 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride("_method"));
 app.use(require("./routes/index.js"));
 
-app.listen(2000, () => console.log("Locked and loaded on port 2000"))
+app.listen(2001, () => console.log("Locked and loaded on port 2001"))

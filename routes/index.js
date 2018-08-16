@@ -3,7 +3,7 @@ const router = express.Router()
 const applicationController = require("../controllers/application.js")
 const userController = require('../controllers/user.js')
 const problemController = require("../controllers/problems.js")
-const solutionController = require("../controllers/solution")
+// const solutionController = require("../controllers/solution")
 
 
 // Application routes
@@ -18,7 +18,8 @@ router.delete("/user/:id", userController.delete)
 // Problem routes
 router.get("/problems", problemController.index)
 router.get("/problems/:id", problemController.show)
-router.post("/problems/:id", problemController.create)
+router.put("/problems/:id", problemController.update)
+// router.post("/problems/:id", problemController.create)
 
 
 // Solution routes
