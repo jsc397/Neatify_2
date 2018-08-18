@@ -34,8 +34,7 @@ module.exports = {
                 // save problem with new solution
                 problem.save(err => {
                     // redirect back to problem show page..actual code to update.
-                    // send this to solution to user show page and save it to
-                    res.redirect(`/`)
+                    res.redirect(`/problems/${problem._id}`)
                 })
             })
         })

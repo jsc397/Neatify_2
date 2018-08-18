@@ -1,13 +1,6 @@
-{{!-- 
-<ul class="each-problem">
-    {{#each problems}}
-    <div>
-        <li> {{ _id }}</li>
-    </div>
-    {{/each}}
-</ul> --}}
+{{!-- here... populate the solutions and see them --}}
 
-
+{{!-- one specific problem --}}
 
 <div>
     {{ paragraph }}
@@ -19,4 +12,13 @@
 <button type ="submit">Submit Solution</button>
 </form> 
 
-
+{{!-- solutions --}}
+{{!-- If there are solutions --}}
+{{!-- For each solution, display the content  --}}
+{{#if solutions}}
+{{#each solutions.length}}
+<div class ="solutions-card">
+    {{content}}
+</div>
+{{/each}}
+{{/if}}
