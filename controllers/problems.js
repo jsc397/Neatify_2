@@ -14,16 +14,21 @@ module.exports = {
 
     show: (req, res) => {
         // console.log('get problem: ', req.params.id)
-        Problem.findOne({_id: req.params.id})
-        .then(problems => {
-            res.render('problems/show', problems)
-        })
+        //Find problem that matches the url's id
+        //then show the paragraphs
+        //then match the object id in the solutions array to the object id in the solutions collection
+        //then show the actual string (content) on client side
+        Problem.find({_id: req.params.id})
+        .populate("solutions")
+        .then()
+
+        res.render('problems/show', { problems } )
     },
    update: (req, res) => {
-    let { content } = req.body
+    let { answer } = req.body
      // create a new solution based on content
         Solution.create({ 
-            content: content
+            content: answer
         }).then(solution => {
         // find problem by it's ID
             Problem.findOne({
