@@ -45,3 +45,4 @@ module.exports = {
     });
   }
 };
+// New problem: when I enter a solution to the database, the solution posts, but the content is not captured, with no error message. Content is empty...with no error message. Why..what is going on.
