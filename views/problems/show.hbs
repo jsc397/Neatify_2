@@ -1,12 +1,10 @@
 {{!-- here... populate the solutions and see them --}}
 
-<p>{{paragraph}}</p>
+<p>{{problems.paragraph}}</p>
 
 
 
-<form action="/problems/{{_id}}?_method=PUT" method="POST" class="solution-form">
-<textarea cols="55" rows="10" name="content"></textarea>
-<button type ="submit">Submit Solution</button>
-</form> 
-
-
+<form action="/problems/{{problems._id}}?_method=PUT" method="POST" class="solution-form">
+    <textarea cols="55" rows="10" name="content"></textarea>
+    <button type="submit">Submit Solution</button>
+</form>

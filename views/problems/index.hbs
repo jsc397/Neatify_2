@@ -1,27 +1,25 @@
-
-{{#if problems}}
+ {{#if problems}}
 <ul class="problems">
     {{#each problems}}
     <div>
-    <li> {{ paragraph }}</li>
-    <li> {{ _id }} </li> 
-    {{!-- id temporary so I can see the id of the problems and see if on click it is going to the specific problem show page --}}
-    <a href ="/problems/{{id}}"> <button class ="problem">Select</button> </a>
+        <li> {{ paragraph }}</li>
+        <li> {{ _id }} </li>
+        {{!-- id temporary so I can see the id of the problems and see if on click it is going to the specific problem show page
+        --}}
+        <a href="/problems/{{id}}"> <button class="problem">Select</button> </a>
     </div>
     {{/each}}
 </ul>
-{{/if}}
-
-    {{!-- <div class="card">
-        <div class="card-content">
-            <a class="card-title" href="/problems/{{id}}">
-                {{ paragraphs }}
-            </a>
-        </div>
-        <div class="card-action">
-            <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
-            <span class="problem__date">{{ createdAt }}</span>
-            <span class="problem_comments">{{ comments.length }} test</span>
-        </div>
-    </div> --}}
-    
+{{/if}} {{!--
+<div class="card">
+    <div class="card-content">
+        <a class="card-title" href="/problems/{{id}}">
+            {{ paragraphs }}
+        </a>
+    </div>
+    <div class="card-action">
+        <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+        <span class="problem__date">{{ createdAt }}</span>
+        <span class="problem_comments">{{ comments.length }} test</span>
+    </div>
+</div> --}}
