@@ -25,7 +25,8 @@ module.exports = {
       });
   },
   update: (req, res) => {
-    let { answer } = req.body;
+    let answer = req.body.content;
+
     // create a new solution based on content
     Solution.create({
       content: answer
