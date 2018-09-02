@@ -18,6 +18,8 @@ module.exports = {
     Problem.findOne({ _id: req.params.id })
       //then show the paragraphs
       // .populate("paragraphs")
+      .sort({ createdAt: -1 })
+      // .limit(10)
       .populate("solutions")
       .then(problems => {
         console.log(problems);
@@ -25,26 +27,6 @@ module.exports = {
       });
     //then match the object id in the solutions array to the object id in the solutions collection
     //then show the actual string (content) on client side
-
-    //   .populate("solutions.content")
-    //   .then(problems => {
-    //     res.render("problems/show", { problems });
-    //   });
-
-    // show: (req, res) => {
-    //   Tweet.findOne({ _id: req.params.id })
-    //     .populate("author")
-    //     .exec(function (err, tweet) {
-    //       Comment.populate(tweet.comments, { path: "author" }, function (
-    //         err,
-    //         comments
-    //       ) {
-    //         tweet.comments = comments;
-    //         console.log(tweet);
-    //         res.render("tweet/show", tweet);
-    //       });
-    //     });
-    // },
   },
   update: (req, res) => {
     let answer = req.body.content;
