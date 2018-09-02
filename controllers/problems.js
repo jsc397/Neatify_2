@@ -19,14 +19,13 @@ module.exports = {
     //then match the object id in the solutions array to the object id in the solutions collection
     //then show the actual string (content) on client side
     Problem.findOne({ _id: req.params.id })
-      .populate("solutions")
+      .populate("solutions.content")
       .then(problems => {
         res.render("problems/show", { problems });
       });
   },
   update: (req, res) => {
     let answer = req.body.content;
-
     // create a new solution based on content
     Solution.create({
       content: answer
