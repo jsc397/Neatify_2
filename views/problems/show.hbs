@@ -9,6 +9,8 @@
     <button type="submit">Submit Solution</button>
 </form>
 
+{{#if problems.solutions }} {{#each problems.solutions}}
 <div class="solution">
-    {{ problems.solutions }}
+    {{content}}
 </div>
+{{/each}} {{/if}}

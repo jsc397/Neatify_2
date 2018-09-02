@@ -13,16 +13,38 @@ module.exports = {
   },
 
   show: (req, res) => {
-    // console.log('get problem: ', req.params.id)
+    console.log("get problem: ", req.params.id);
     //Find problem that matches the url's id
-    //then show the paragraphs
-    //then match the object id in the solutions array to the object id in the solutions collection
-    //then show the actual string (content) on client side
     Problem.findOne({ _id: req.params.id })
-      .populate("solutions.content")
+      //then show the paragraphs
+      // .populate("paragraphs")
+      .populate("solutions")
       .then(problems => {
+        console.log(problems);
         res.render("problems/show", { problems });
       });
+    //then match the object id in the solutions array to the object id in the solutions collection
+    //then show the actual string (content) on client side
+
+    //   .populate("solutions.content")
+    //   .then(problems => {
+    //     res.render("problems/show", { problems });
+    //   });
+
+    // show: (req, res) => {
+    //   Tweet.findOne({ _id: req.params.id })
+    //     .populate("author")
+    //     .exec(function (err, tweet) {
+    //       Comment.populate(tweet.comments, { path: "author" }, function (
+    //         err,
+    //         comments
+    //       ) {
+    //         tweet.comments = comments;
+    //         console.log(tweet);
+    //         res.render("tweet/show", tweet);
+    //       });
+    //     });
+    // },
   },
   update: (req, res) => {
     let answer = req.body.content;
