@@ -2,18 +2,15 @@
     <h2>{{user.local.email}}</h2>
     {{#if user.solutions}}
     <div class="solutions">
-        {{#each user.solutions}} {{> 'solution'}} {{/each}}
+        {{#each user.solutions}} {{/each}}
     </div>
     {{else}}
     <p>No Solutions yet</p>
     {{/if}}
 </section>
 
-<form action="/user/{{this.id}}?_method=delete" method="post">
-    <button type="delete" value="Remove">Delete User</button>
+<form action="/user/{{id}}?_DELETE=" method="POST">
+    <button type="submit" name "button">Delete User</button>
 </form>
-<form action="/problems" method="get">
-    <button type="submit" class="problems-page">Problems</button>
 
-{{!-- <a href="/problems"><button class="problems-page">Problems</button></a> --}}
-</form>
+<a href="/problems"><button class="problems-page">Problems</button></a>

@@ -21,6 +21,8 @@ module.exports = {
       .sort({ createdAt: -1 })
       // .limit(10)
       .populate("solutions")
+      // then find a user by it's id
+      // then populate the userid
       .then(problems => {
         console.log(problems);
         res.render("problems/show", { problems });
@@ -49,4 +51,4 @@ module.exports = {
     });
   }
 };
-// New problem: when I enter a solution to the database, the solution posts, but the content is not captured, with no error message. Content is empty...with no error message. Why..what is going on.
+// Advanced for update: save the problem then find the user by id and also save the problem to user show page
