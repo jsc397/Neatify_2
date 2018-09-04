@@ -9,11 +9,11 @@
     {{/if}}
 </section>
 
-<form action="/user/{{this.id}}?_method=delete" method="post">
+<form action="/user/{{user._id}}" method="post">
     <button type="delete" value="Remove">Delete User</button>
 </form>
 <form action="/problems" method="get">
     <button type="submit" class="problems-page">Problems</button>
 
-{{!-- <a href="/problems"><button class="problems-page">Problems</button></a> --}}
+    {{!-- <a href="/problems"><button class="problems-page">Problems</button></a> --}}
 </form>
