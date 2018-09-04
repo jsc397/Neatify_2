@@ -33,7 +33,7 @@ module.exports = {
 
   delete: (req, res) => {
     //route works, problem is user view
-    console.log(req);
+    // console.log(req);
     User.findOneAndRemove({ _id: req.params.id }).then(() => {
       res.redirect("/");
     });
