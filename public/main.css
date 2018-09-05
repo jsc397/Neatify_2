@@ -1,4 +1,4 @@
-.nav-wrapper {
+/* .nav-wrapper {
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
@@ -6,12 +6,15 @@
 
 select {
   display: block;
+} */
+
+body {
+  background-color: black;
+}
+h1 {
+  color: white;
 }
 
-body{
-    background-color: black;
-}
-
-#new-user {
+/* #new-user {
     font-size: 2000px !important;
-}
+} */

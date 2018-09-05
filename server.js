@@ -6,10 +6,11 @@ const path = require("path");
 const methodOverride = require("method-override");
 
 app.set("view engine", "hbs");
-// app.use(express.static('./public'))
+app.use(express.static("public"));
+// app.use(express.static(path.join(__dirname, "public"))); //  "public" off of current is root
 
-app.use(express.static(path.join(__dirname, "/public")));
-
+// app.use(express.static(path.join(__dirname, "/public")));
+// app.use("/static", express.static(path.join(__dirname, "public")));
 hbs.registerPartials(__dirname + "/views/partials");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
