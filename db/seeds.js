@@ -4,7 +4,7 @@ const Problem = require("../models/Problem");
 
 Problem.find({}).remove(() => {
   Solution.find({}).remove(() => {
-    Problem.create({
+    let problemOne = Problem.create({
       paragraph: "This is problem number1."
     }).then(problem => {
       Promise.all([
