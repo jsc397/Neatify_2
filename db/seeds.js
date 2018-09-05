@@ -27,7 +27,7 @@ const Problem = require("../models/Problem");
 //   });
 // });
 Problem.find({}).remove(() => {
-  Soltuion.find({}).remove(() => {
+  Solution.find({}).remove(() => {
     let problemOne = Problem.create({
       paragraph: "This is problem 1"
     }).then(problem => {
