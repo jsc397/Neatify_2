@@ -1,16 +1,22 @@
-<div class="profile d-flex flex-column">
-    <h2>{{user.local.email}}</h2>
-    {{#if user.solutions}}
-    <div class="solutions d-flex flex-column">
-        {{#each user.solutions}} {{/each}}
+<div class="profile">
+    <div class="user-wrapper d-flex flex-column">
+        <h2>Welcome {{user.local.email}}!</h2>
+        {{#if user.solutions}}
+        <div class="solutions d-flex flex-column">
+            {{#each user.solutions}} {{/each}}
+        </div>
+        {{else}}
+        <p class="user-no-solution">No Solutions yet</p>
+        {{/if}}
     </div>
-    {{else}}
-    <p>No Solutions yet</p>
-    {{/if}}
+    <div class="user-show-button-wrapper d-flex flex-column">
+        <div class="user-delete">
+            <form action="/user/{{user.id}}?_method=DELETE" method="POST">
+                <input class="btn btn-outline-info" type="submit" value="Delete User" />
+            </form>
+        </div>
+        <div class="user-problems">
+            <a href="/problems"><button class="btn btn-outline-info problems-page">Problems</button></a>
+        </div>
+    </div>
 </div>
-
-<form action="/user/{{user.id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete User" />
-</form>
-
-<a href="/problems"><button class="problems-page">Problems</button></a>

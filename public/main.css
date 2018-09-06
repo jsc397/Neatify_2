@@ -51,6 +51,17 @@ h2 {
   margin-top: 20%;
 }
 
+/* User show */
+
+.user-no-solution {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.45rem;
+}
+
+.user-problems {
+  margin-top: 2%;
+}
+
 /* Problem index */
 .card-header {
   font-size: 1.5em;
