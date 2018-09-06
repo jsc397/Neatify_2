@@ -29,6 +29,12 @@ h1 {
   font-family: Julius Sans One;
 }
 
+h2 {
+  color: white;
+  font-size: 2em;
+  font-family: Julius Sans One;
+}
+
 .card {
   max-width: 42em;
   background-color: rgba(255, 255, 255, 0.096);
@@ -40,4 +46,11 @@ h1 {
   color: rgb(184, 201, 193);
   line-height: 1.8em;
 }
+/* User new */
+.user-wrapper {
+  margin-top: 20%;
+}
+
 /* User show */
+.profile {
+}

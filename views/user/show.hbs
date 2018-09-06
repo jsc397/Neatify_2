@@ -1,13 +1,13 @@
-<section class="profile">
+<div class="profile d-flex flex-column">
     <h2>{{user.local.email}}</h2>
     {{#if user.solutions}}
-    <div class="solutions">
+    <div class="solutions d-flex flex-column">
         {{#each user.solutions}} {{/each}}
     </div>
     {{else}}
     <p>No Solutions yet</p>
     {{/if}}
-</section>
+</div>
 
 <form action="/user/{{user.id}}?_method=DELETE" method="POST">
     <input type="submit" value="Delete User" />
