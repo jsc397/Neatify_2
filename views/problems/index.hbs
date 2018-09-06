@@ -1,14 +1,16 @@
  {{#if problems}}
 <ul class="problems">
     {{#each problems}}
-    <div>
-        <li> {{ paragraph }}</li>
-        <li> {{ _id }} </li>
-        {{!-- id temporary so I can see the id of the problems and see if on click it is going to the specific problem show page
-        --}}
-        <a href="/problems/{{id}}"> <button class="problem">Select</button> </a>
-    </div>
-
-    {{/each}}
+    <div class="problem-wrapper">
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Please choose a Problem</div>
+            <div class="card-body text-secondary">
+                <h5 class="card-title">Problem</h5>
+                <p class="card-text">{{ paragraph }}</p>
+                <a href="/problems/{{id}}"> <button class="btn btn-outline-info">Select</button> </a>
+            </div>
+        </div>
+        {{/each}}
 </ul>
+
 {{/if}}
