@@ -15,7 +15,7 @@ As a beginner writer, I want to practice editing and de-cluttering my writing, s
 
 ## Wireframing
 
-**Models**
+### **Models**
 
 User:
 username = "string"
@@ -25,23 +25,34 @@ input = "string"
 
 Solution:
 content = "string"
+createdAt
+author = user
+comments
 
 Comment:
-entry = "string"
+content = "string"
+createdAt
+author
 
-**Pseudocode**
-For the rating:
-On Click starts the whole thing:
+#### **Planning** :
 
-set the stars equal to numbers
-starOne (class name) = 1
-starTwo (class name) = 2
-starThree (class name) = 3
-starFour (class name) = 4
+#### - Pseudocode
 
-if starOne = 1, then color the star
-if starTwo = 2, then color the previous star + this star
-if starThree = 3, then color the previous 2 stars + this starTwo
-if starFour = 4, then color the previous 3 stars + this star
+1. User should be able to sign-up with his/her email and password
+2. Once the User signs up, he/she can access all of the problems
+3. User can click on a problem, and type a solution into the input box
+4. Then the User solution will get saved to the database and displayed on the Problem show page
 
-Bonus: maybe Modules for the login
+## Production Environment
+
+- Tech Stack: MEHN (MongoDB, Express.js, Handlebars, Node.js)
+  - To run this app in production, please clone this repository :
+  ```bash
+  $ cd Neatify2
+  $ npm run install
+  $ code .
+  ```
+
+## Deployment
+
+- This app is deployed using Heroku : Please visit [this](https://neatify2.herokuapp.com/) link for the deployed site
