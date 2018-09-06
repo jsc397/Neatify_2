@@ -6,7 +6,6 @@ body {
 
 /* Header */
 .nav-link {
-  /* padding: 0.25rem 0; */
   font-weight: 700;
   color: rgb(255, 255, 255);
   border-bottom: 0.25rem solid transparent;
@@ -14,8 +13,7 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-  border-bottom-color: rgba(3, 207, 105, 0.815);
-  /* background-color: rgba(255, 255, 255, 0.2); */
+  border-bottom-color: rgba(184, 201, 193, 0.815);
   color: rgb(255, 255, 255);
 }
 
@@ -25,10 +23,21 @@ body {
 }
 
 /* APP Index View */
+h1 {
+  color: white;
+  font-size: 5.8em;
+  font-family: Julius Sans One;
+}
 
 .card {
   max-width: 42em;
-  background-color: aquamarine;
+  background-color: rgba(255, 255, 255, 0.096);
+  text-align: center;
+  margin-top: 20%;
+  border-radius: 20px;
 }
-
+.card-text {
+  color: rgb(184, 201, 193);
+  line-height: 1.8em;
+}
 /* User show */
