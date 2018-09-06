@@ -1,19 +1,20 @@
 {{!-- here... populate the solutions and see them --}}
+<div class="problem-wrapper d-flex flex-column">
+    <p>{{problems.paragraph}}</p>
 
-<p>{{problems.paragraph}}</p>
+    <form action="/problems/{{problems._id}}?_method=PUT" method="POST" class="solution-form">
+        <textarea cols="55" rows="10" name="content"></textarea>
+        <button type="submit">Submit Solution</button>
+    </form>
 
-<form action="/problems/{{problems._id}}?_method=PUT" method="POST" class="solution-form">
-    <textarea cols="55" rows="10" name="content"></textarea>
-    <button type="submit">Submit Solution</button>
-</form>
+    <a href="/problems" class="button">
+        <button>See all problems</button>
+    </a>
 
-<a href="/problems" class="button">
-    <button>See all problems</button>
-</a>
-
-{{#if problems.solutions }} {{#each problems.solutions}}
-<div class="solution">
-    <span>{{createdAt}}</span>
-    <span>{{content}}</span>
+    {{#if problems.solutions }} {{#each problems.solutions}}
+    <div class="solution">
+        <span>{{createdAt}}</span>
+        <span>{{content}}</span>
+    </div>
+    {{/each}} {{/if}}
 </div>
-{{/each}} {{/if}}
