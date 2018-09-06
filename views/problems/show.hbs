@@ -1,6 +1,6 @@
 {{!-- here... populate the solutions and see them --}}
 <div class="problem-wrapper d-flex mt-2 flex-column">
-    <h3 class="problem">{{problems.paragraph}}</h3>
+    <h5 class="problem">{{problems.paragraph}}</h5>
 
     <form action="/problems/{{problems._id}}?_method=PUT" method="POST" class="solution-form">
         <textarea class='form-control' id='formControl' rows="3" name="content" placeholder="Please type your solution here"></textarea>
