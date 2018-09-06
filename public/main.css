@@ -52,3 +52,7 @@ h2 {
 }
 
 /* Problem index */
+.card-header {
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.6);
+}
