@@ -1,16 +1,12 @@
+<section class="user-wrapper d-flex flex-column">
 
-<section class="row">
-    <h4 id="new-user">Create NEW User:</h4>
+    <h2 id="new-user">Create New User</h2>
 
     <form action="/user" method="POST" class="auth-form">
+        <p class="input-field"> <input type="email" name="email" placeholder="Email"> </p>
         <p class="input-field">
-            <input type="email" name="email" placeholder="Email">
-        </p>
+            <input type="password" name="password" placeholder="Password"> </p>
         <p class="input-field">
-            <input type="password" name="password" placeholder="Password">
-        </p>
-        <p class="input-field">
-            <input type="submit" value="Sign Up" class="btn">
-        </p>
+            <input type="submit" value="Sign Up" class="btn btn-outline-info"> </p>
     </form>
 </section>
