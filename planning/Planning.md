@@ -56,3 +56,13 @@ author
 ## Deployment
 
 - This app is deployed using Heroku : Please visit [this](https://neatify2.herokuapp.com/) link for the deployed site
+
+## Next steps
+
+- I would like to incorporate authentication into the the site so that the User can login and see all of his/her solutions on the user page.
+
+- I would also like to make the site more responsive.
+
+### Site consulted for sample problems:
+
+[Snippets: Some Examples of Bad Writing for Your Amusement and Horror](http://www.d.umn.edu/~schilton/Courses/Snippets.html)
