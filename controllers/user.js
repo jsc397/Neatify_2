@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const { Solution, Comment } = require("../models/Solution");
+const passport = require("passport");
 
 module.exports = {
   show: (req, res) => {
@@ -13,22 +14,33 @@ module.exports = {
       });
   },
 
-  new: (req, res) => {
-    res.render("user/new");
+  login: (req, res) => {
+    res.render("user/login", { message: req.flash("signupMessage") });
   },
-
-  create: (req, res) => {
-    User.create({
-      local: {
-        email: req.body.email,
-        password: req.body.password
-      }
-    }).then(user => {
-      res.redirect(`/user/${user._id}`);
-      // res.redirect(`/problem/index`)
-      //potential: when the user signs ups, instead of going to a blank user ID have them go to the problems page?
-      // Or...keep this as is...create a button that redirects them to the problems page
+  createLogin: (req, res) => {
+    const login = passport.authenticate("local-login", {
+      successRedirect: "/user/:id",
+      failureRedirect: "/user",
+      failureFlash: true
     });
+
+    return login(req, res);
+  },
+  signUp: (req, res) => {
+    res.render("user/signup", { message: req.flash("signupMessage") });
+  },
+  createSignUp: (req, res) => {
+    const signup = passport.authenticate("local-signup", {
+      successRedirect: "/user",
+      failureRedirect: "/",
+      failureFlash: true
+    });
+
+    return signup(req, res);
+  },
+  logout: (req, res) => {
+    req.logout();
+    res.redirect("/");
   },
 
   delete: (req, res) => {

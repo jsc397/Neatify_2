@@ -9,10 +9,17 @@ const problemController = require("../controllers/problems.js");
 router.get("/", applicationController.index);
 
 //User routes
-router.get("/user", userController.new);
-router.post("/user", userController.create);
+// router.get("/user", userController.new);
+// router.post("/user", userController.create);
+// router.get("/user/:id", userController.show);
+// router.delete("/user/:id", userController.delete);
+// User login&signup
+router.get("/login", userController.login);
+router.post("/login", userController.createLogin);
+router.get("/user", userController.signUp);
+router.post("/user", userController.createSignUp);
+router.get("/logout", userController.logout);
 router.get("/user/:id", userController.show);
-router.delete("/user/:id", userController.delete);
 
 // Problem routes
 router.get("/problems", problemController.index);
