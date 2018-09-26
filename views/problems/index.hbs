@@ -1,11 +1,8 @@
-{{#if problems}}
-
 <ul class="problems">
     <h2>Choose a Problem</h2>
     {{#each problems}}
     <div class="problem-wrapper">
         <div class="card border-secondary mb-3" style="max-width: 50rem;">
-            {{!-- <div class="card-header">Problem</div> --}}
             <div class="card-body text-secondary">
                 <p class="card-text">{{ paragraph }}</p>
                 <a href="/problems/{{id}}"> <button class="btn btn-outline-info">Select</button> </a>
@@ -13,4 +10,3 @@
         </div>
         {{/each}}
 </ul>
-{{/if}}

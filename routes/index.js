@@ -3,7 +3,6 @@ const router = express.Router();
 const applicationController = require("../controllers/application.js");
 const userController = require("../controllers/user.js");
 const problemController = require("../controllers/problems.js");
-// const solutionController = require("../controllers/solution")
 
 // Application routes
 router.get("/", applicationController.index);

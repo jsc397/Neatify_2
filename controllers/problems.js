@@ -51,4 +51,3 @@ module.exports = {
     });
   }
 };
-// Advanced for update: save the problem then find the user by id and also save the problem to user show page

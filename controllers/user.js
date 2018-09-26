@@ -1,5 +1,4 @@
 const User = require("../models/User");
-const { Solution, Comment } = require("../models/Solution");
 
 module.exports = {
   show: (req, res) => {
