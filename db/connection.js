@@ -6,7 +6,7 @@ if (process.env.NODE_ENV == "production") {
   mongoose.connect(
     "mongodb://localhost:27017/neatify_2",
     { useNewUrlParser: true }
-  ); //dangerzone is our local database name;
+  );
 }
 mongoose.Promise = Promise;
 module.exports = mongoose;
